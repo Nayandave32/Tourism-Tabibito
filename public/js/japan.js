@@ -2,15 +2,6 @@ let popup1 = document.querySelector(".blue-1");
 
 let html = "";
 
-if session["userName"] == NULL)
-{
-  let button = document.querySelector("login");
-  button,style.visible = true;
-}
-else // this solved the issue
-{
-button.style.visible= false;
-}
 
 function popup(){
     let popupNode = document.createElement("div");
