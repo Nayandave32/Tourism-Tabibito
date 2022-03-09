@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Japan Website name not ready</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link  rel="stylesheet" type="text/css" href="/public/css/styles.css">
+</head>
+<body>
+  <nav id = "nav-holder" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="plan.ejs">Plan <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="info.ejs">Info</a>
+        <a class="nav-item nav-link" href="FAQ.ejs">FAQ</a>
+        <a class="nav-item nav-link " href="#">Tabibito</a>
+        <a class="nav-item nav-link login" href="login.ejs">Log in</a>
+        <a class="nav-item nav-link login end" href="register.ejs">Register</a>
+      </div>
+    </div>
+  </nav>
+  <div class = "tourData">
+    <div class="tourDataInner">
+      <h3>Here is your personalised itinerary for <%= tourData.name %> <%= tourData.surname %>: </h3>
+      <h3> E-mail: <%= tourData.email %> </h3>
+      <h3>Tour size: <%= tourData.size %> people </h3>
+      <h3>Duration: <%= tourData.duration %> days</h3>
+      <h3>Budget: <%= tourData.budget %> </h3>
+      <h3>Medical concerns: <%= tourData.medical %> </h3>
+    </div>
+    <div class="tourDataInner2">
+      <h1> The current weather in Tokyo is: </h2>
+      <h3> Temp: <%= weather.main.temp %> °C </h3>
+      <h3> Forecast: <%=weather.weather[0].description %> </h3>
+      <h3> Feels like: <%= weather.main.feels_like %> °C </h3>
+      
+    </div>
+  </div>
+  </div>
+
+  <div class="table-responsive itinerary">
+    <table class="table tabel-bordered table-hover">
+      <tr>
+        <th  style="width: 10%" scope="col">Day</th>
+        <th style="width: 90%; text-align: center;" scope="col">Plan</th>
+        
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <th scope="row"> Day 1 :  Arrive in Tokyo</th>
+          <td colspan="2">Today is about getting adjusted. About realizing: OMG I am in Japan right now, and my universe is in chaooooos! There’s no pressure to do anything in particular besides finding your hotel or Airbnb, try to order food in Japanese for the first time, and experience a complicated Japanese toilet. That said, depending on when you arrive you might have some time to really spend exploring Tokyo. We’re going to come back to Tokyo at the end of the trip, so our first day is really just about getting faimiliar with the city. Here are a couple of ideas of things to do in Tokyo</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 2: Take the train to Kyoto</th>
+          <td colspan="2">Kyoto is considered the cultural capital of Japan. Why not? It was Japan’s official capital for nearly 700 years. Here you’re going to get a real taste for what traditional Japan was like, by visiting shrines and temples erected hundreds of years ago (or more!). Besides architecture, Kyoto also has an incredible food scene. Here is where you can try Japan’s famous multi-course meal, called kaiseki. For now, store your stuff in a coin locker at the Kyoto train station and catch the bus or train to the Saga-Arashiyama Station. Getting from there to our first stop, Tenryu-Ji is as easy as following the flow of people. After that, we’ll visit the neighboring Arashiyama bamboo forest . The final stop of the day is the super shiny Golden Pavillion .</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 3: Enjoy the highlights of Kyoto</th>
+          <td colspan="2">Today is the main day to discover Kyoto, so be sure to start early! Your most efficient path would be to start your morning at the Nishiki Market,take the bus to Gion , and then spend the day in East Kyoto in the Higashiyama area. After following that path and seeing tons of temples, shrines, and beautiful streets, you’ll end up close to Philosopher's Path , where you can walk a long the stream and enjoy some solitude!</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 4: Day trips to Fushimi Inari Shrine & Nara Deer Park</th>
+          <td colspan="2">Imagine this: a capital city full of thousands of docile, free-ranging deer. If this sounds like your idea of paradise, you can’t miss Nara, Japan. Plan a solid half-day for Nara, if not more. We spent a lot of time walking around Nara Park, there is a lot to explore and hiking paths if you want to speak more time walking around!
+
+            Spend your last night in Kyoto and wake up early to catch the train down to the southernmost post on our itinerary: Hiroshima .</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 5: Remember the history of Hiroshima</th>
+          <td colspan="2"> I will start by saying that Hiroshima is simply not a beautiful city. It was hastily rebuilt after the tragic events of World War II and the destruction of the atomic bomb. As a result, you won’t find charming alleys or old merchant districts. Instead, you come to Hiroshima to get a glimpse into the lives of the people who both died and survived as a result of the bomb, and the effects it’s had on the community. The atomic bomb dome and Hiroshima castle are two must visit places in this city.<td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 6: Miyajima, Himeji, & Osaka</th>
+          <td colspan="2">This is our crazy day. Start in Hiroshima, take the JR Ferry to Miyajima. Spend some time on the island, catch the ferry back, connect to a train to Himeji. Spend the rest of the day exploring the castle and grounds until it closes. Wind up in Osaka to start binging on street food. I’ll start with this preface: If you’re not set on exploring Hiroshima by night, I’d encourage you to spend the night on Miyajima instead. This island in Hiroshima bay is home to one of the top 3 national sights in Japan, and is one of the most visited locations in the entire country. You can beat the first boat ride in and have a Miyajima at sunrise all to yourself! After taking the ferry back from Miyajima to the mainland (you want the Hiroden-miyajima-guchi station), hop on the train to Himeji. We’ll spend the rest of the day here until the castle closes at 5PM. Upon arrival, lock your backpack in a coin locker and catch the bus to the castle from the train station.
+
+            For the uninitiated: Himeji Castle is perhaps Japan’s most famous and best-preserved castle. It’s meant to resemble a bird in flight, and is known as the “White Heron Castle.” It has survived extensive bombing of the surrounding city during World War II as well as a massive earthquake in the mid-nineties. Himeji is here to stay. Important! Check the train times to make sure you’ll be able to catch a train to Osaka shortly after the castle closes.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 7: Take the train to Takayama in the Japan Alps</th>
+          <td colspan="2">You read me right: Japan has got its very own range of alps. It contains three mountain ranges: Akaishi mountains, Kiso mountains, and Hida mountains. We’re going to the latter, to the Hida region.
+
+            Absolutely do not forget to book the Wide View train for your ride through the mountains! You’ll get a train with enormous glass windows, perfect for day dreaming about your imaginary life in the Japanese countryside a la My neighbor Totoro. For us, Takayama seemed the perfect place to check in to a traditional Japanese inn, called Ryokan. This has got to be one of the top experiences to try in Japan, and if you’re not in a big city like Kyoto, you can do it for a bit of a better price.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 8: Day trip to Shirakawa-go</th>
+          <td colspan="2">Enjoy breakfast in your Ryokan, check out the morning market, and in the early afternoon, hop on a bus to Shirakawa-go.
+
+            Shirakawa-go, is one of the tiny tiny villages where people still live in thatch-roof houses. Every 30-40 years the roofs are replaced by 200 community members and volunteers working quickly over two days. The town itself is a UNESCO World Heritage site, and you can go inside several of the thatched houses and learn more about life in the village. After visiting Shirakawa-go, spend your last night in Takayama. Enjoy breakfast the next morning, because it’s time to hit the road and head north.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row"> Day 9: Travel to Aomori in Northern Japan</th>
+          <td colspan="2"> I will start with this: If you’re not visiting Hirosaki during cherry blossom season, I’m not sure it’s worth it. The town itself is pretty lackluster, and it’s the park filled with 2,500 cherry blossoms which makes this location truly spectacular and yet under-the-radar for western visitors.
+
+            That said, Hirosaki is probably one of the few places where we really felt like we weren’t just one of thousands of western tourists. Almost everyone in the city was either Japanese, or traveling to Japan from a neighboring country in Asia. For that reason, it was really cool to visit somewhere that felt a little undiscovered by people like us.
+            
+            The trip from Takayama to Hirosaki takes about 8 hours, so most likely, you’ll arrive in the early evening, with enough time to see Hirosaki’s cherry blossoms illuminated by night.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row"> Day 10: Spend the day at the Hirosaki Cherry Blossom Festival</th>
+          <td colspan="2"> The next day, it’s time to enjoy the park in all it’s bright and blooming glory. The park is overflowing with flowers, idyllic Japanese-style bridges, petal-filled moats, and one of the coolest sights- the Sakura tunnel! I imagine this place also looks spectacular in Autumn, but I can only tell you: it’s gorgeous in Spring, and perfect if you’re making a late Spring trip, where the cherry blossoms in more southerly locations will have already gone. Tonight, take the train to Nikko, Japan, a town a short way from Tokyo but packed full of historic locations and natural wonders!</td>
+          
+        </tr>
+        <tr>
+          <th scope="row"> Day 11: Experience beautiful Nikko</th>
+          <td colspan="2"> I made a critical mistake when coming to Nikko. I came during Golden Week, which happens at the beginning of May. During this time, the entire country of Japan is basically on vacation, and of course, where do they go on vacation: why, Nikko!
+
+            And it’s no wonder: Nikko was once a favorite retreat for the emperor, once he had moved his residence from Nara to Tokyo. As a result, Nikko has some of the most concentrated famous sights in Japan. In fact, a huge swath is a designated UNESCO World Heritage Site. For a small town, this place has got a lot going on. Enjoy your time in Nikko, because after this it’s back to the big city! Pick up your stuff from the hostel, hop on a train, we’re going to Tokyo…but for real this time.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row"> Day 12 and 13: Time for Tokyo</th>
+          <td colspan="2"> A lot of people who come to Japan spend a lot of time in Tokyo. I mean, it makes sense: it’s got the most restaurants per capita in the world, you could spend a lifetime exploring every conceivable experience this city can offer. That said, I didn’t try to do Tokyo hardcore. For one, I actually visited friends while here, which tends to make everything a little less go-go-go. On the other hand, there is just so much there, your chances of “making a dent in Tokyo” are miniscule, so why not try!</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day 14: Spend the day at Mt. Fuji and fly home in the evening</th>
+          <td colspan="2">It’s the last day, you can do it! Get up as early as you can muster to see Mt. Fuji in the morning light, reflected in Lake Kawaguchi. Conventional wisdom states that your best viewing of Mt. Fuji happens first thing in the morning, but for us, the mountain became more visible as the day went on. By the end of the day, it was clear and big and blue.
+
+            I’ve gone in-depth about the best places to view Mt. Fuji, especially if you’re going in Spring, but one thing I can’t help but mention here is the Pink Moss Festival ! You can take a bus here from the main station in Kawaguchi-ko, and travel to a spot closer to the mountain that is just covered in pink flowers.</td>
+          
+        </tr>
+
+      </tbody>
+    
+    </table>
+  </div>
+  
+
+  
+</body>

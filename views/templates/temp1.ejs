@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Japan Website name not ready</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link  rel="stylesheet" type="text/css" href="/public/css/styles.css">
+</head>
+<body>
+  <nav id = "nav-holder" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="plan.ejs">Plan <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="info.ejs">Info</a>
+        <a class="nav-item nav-link" href="FAQ.ejs">FAQ</a>
+        <a class="nav-item nav-link " href="#">Tabibito</a>
+        <a class="nav-item nav-link login" href="login.ejs">Log in</a>
+        <a class="nav-item nav-link login end" href="register.ejs">Register</a>
+      </div>
+    </div>
+  </nav>
+  <div class = "tourData">
+    <div class="tourDataInner">
+      <h3>Here is your personalised itinerary for <%= tourData.name %> <%= tourData.surname %>: </h3>
+      <h3> E-mail: <%= tourData.email %> </h3>
+      <h3>Tour size: <%= tourData.size %> people </h3>
+      <h3>Duration: <%= tourData.duration %> days</h3>
+      <h3>Budget: <%= tourData.budget %> </h3>
+      <h3>Medical concerns: <%= tourData.medical %> </h3>
+    </div>
+    <div class="tourDataInner2">
+      <h1> The current weather in Tokyo is: </h2>
+      <h3> Temp: <%= weather.main.temp %> °C </h3>
+      <h3> Forecast: <%=weather.weather[0].description %> </h3>
+      <h3> Feels like: <%= weather.main.feels_like %> °C </h3>
+      
+    </div>
+  </div>
+
+  <div class="table-responsive itinerary">
+    <table class="table tabel-bordered table-hover">
+      <tr>
+        <th  style="width: 10%" scope="col">Day</th>
+        <th style="width: 90%; text-align: center;" scope="col">Plan</th>
+        
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Day One: Shopping and Sushi in Tokyo</th>
+          <td colspan="2">Dive straight into Shinjuku, Tokyo‘s neon-lit heart, where you’ll find skyscrapers stacked like Tetris, colorful karaoke bars and endless rows of ramen and sushi joints. Hit Tokyu Hands, which is as much amusement park as department store; you’ll find everything from grow-your-own bonsai kits to kabuki masks. From here head to kooky Harajuku, Japan’s pop culture epicenter. Spot cosplay fans dressed as Alice in Wonderland, scary warlords and superheroes; shop for clothes, makeup and music; and then stuff your face with fruity cream-filled crepes on cutesy Takeshita Street. End the day at the eye-popping, ear-bashing, utterly insane robot cabaret show.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day Two: Tokyo’s Cultural Treasures</th>
+          <td colspan="2">On the surface Tokyo is all sci-fi, but delve a little deeper and you’ll find another world anchored in history and tradition. Take a walk around the Meiji Jingu shrine to see kimono-clad ladies, bicycling grandpas and dinky stone dog deities. Amble through the atmospheric backstreets of Asakusa, Tokyo’s oldest neighborhood, or stroll around the serene Imperial Palace East Gardens to admire the soaring entrance gates, thick stone ramparts, swan-filled moats and miniature waterfalls. In the evening, soak up sake, Kobe steak and spectacular city views at the New York Grill, at the top of the 52-story Park Hyatt Hotel (which provided the backdrop to the Oscar-winning film Lost in Translation).</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day Three: Hot Springs and Mount Fuji Views in Hakone</th>
+          <td colspan="2">Hop a bullet train in Tokyo and in just 90 minutes you can reach the tranquil hills, rolling forests and therapeutic hot springs of Hakone—the perfect detour from a hectic Tokyo-Kyoto itinerary. At the heart of the town is Ashino-ko, a glassy lake where you can see snow-dusted Mount Fuji framed alongside an ancient tori gate rising from the water. Instagram your heart out and then head to Hakone Yuryo, an elegant public bath house with natural stone pools and pretty woodland views.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day Four: Hakone to Kyoto</th>
+          <td colspan="2">Keep your eyes on the prize—Mount Fuji—by booking a seat on the righthand side of the train to Kyoto. The five-hour journey should see you arriving in Japan’s former capital in time for sundown—the best time for geisha spotting. Only 200 of these incredible “living works of art” still exist in the city, and they’re hard to track down. But if you wander around lantern-lit Gion, particularly around Hanami-koji Street, you may just catch a flash of silk and red lipstick slipping between wooden houses. Hungry? Stop by Saijiki Toshigami for seasonal fare sliced, diced and sizzled in front of you.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day Five: Temple Spotting in Kyoto</th>
+          <td colspan="2">Cleft into Kyoto’s eastern hills and with a grand wooden platform that boasts splendid views across the city, Kiyomizu-dera Temple is one of the most beautiful attractions in all of Japan. It’s also one of the busiest. Most tour groups don’t arrive until after breakfast, but the temple opens at 6 a.m., so rise early to beat the crowds. Afterward, wander downhill for a bento box lunch under the willow and maple trees of Maruyama Park before venturing down narrow cobblestone alleyways to the ancient Zen gardens of the 17th-century Kodaiji Temple, followed by a whizz round the Fanta-orange Yasaka Shrine./td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day Six: Kyoto’s Ancient and Natural Highlights</th>
+          <td colspan="2">Explore Arishiyama Bamboo Forest, where delicate sunbeams push through thick greenery to create an enchanting tunnel of light and dark. Start at the southern entrance and head to the charming Tenryu-ji Temple, which is also known as the 100 Flowers Garden (you’ll soon see why). When you’ve had your fill of flora, circle back toward Arashiyama Station and up to the second floor, to Obu Café, for curried noodles and a mango matcha smoothie. From here you can hop on one of the little purple trains to the 1,200-year old Daikaku-ji Temple; as you walk around, listen for tweeting sounds coming from the “nightingale floors”—they were designed as a kind of ancient alarm system to alert samurai to the presence of intruders.</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Day Seven: Shrines and Waterfront Strolls in Kyoto</th>
+          <td colspan="2">With more than 1,600 extraordinary temples and shrines to see in Kyoto, you could spend years trying to tick them all off. Two exceptionally beautiful buildings that you won’t want to miss are the Inari Fushimi Shrine, with its seemingly endless colonnades of orange lacquered gates, and the ethereal, gold-covered Kinkakuji. End your week on the banks of the Kamo River, watching businesspeople cycling home, couples canoodling under bridges, and friends clinking glasses in outdoor bars.</td>
+          
+        </tr>
+      </tbody>
+    
+    </table>
+  </div>
+  
+
+  
+</body>
