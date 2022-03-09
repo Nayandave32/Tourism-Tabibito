@@ -45,9 +45,9 @@ app.use('/request-type', (req, res, next) => {
 app.use('/public', express.static('public'));
 app.use('/public', serveIndex('public'));
   
-
-
-  app.listen(3000, () => console.log('Example app is listening on port 3000.'));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log("listening to port 5000"))
+  //app.listen(3000, () => console.log('Example app is listening on port 3000.'));
   
   app.get('/', function(req, res) {
 
