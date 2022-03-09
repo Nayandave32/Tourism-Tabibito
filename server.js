@@ -7,10 +7,10 @@ var request = require("request");
 const session = require('express-session');
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : 'password123',
-	database : 'nodelogin',
+	host     : 'eu-cdbr-west-02.cleardb.net',
+	user     : 'bdb9c4d458a540',
+	password : 'dc57e971',
+	database : 'heroku_7dcd2f72677ea10',
   insecureAuth : true
 });
 
