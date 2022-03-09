@@ -11,10 +11,10 @@ const connection = mysql.createConnection({
 	user     : 'bdb9c4d458a540',
 	password : 'dc57e971',
 	database : 'heroku_7dcd2f72677ea10',
-  insecureAuth : true
+  //insecureAuth : true
 });
 
-//ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+
 
 
 
