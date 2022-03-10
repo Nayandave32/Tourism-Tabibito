@@ -97,9 +97,11 @@ app.listen(port, () => console.log("listening to port 5000"))
   app.get('/logout.ejs', function(req, res){
     
     req.session.destroy(() => {
-      res.redirect("/"); //Inside a callback… bulletproof!
+      res.redirect("/");
      });
     });
+
+
   app.post('/auth', function(req, res) {
     
     let username = req.body.username;
