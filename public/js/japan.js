@@ -10,9 +10,7 @@ function popup(){
         <span class="popup--button" onclick="this.parentNode.remove();">&times; </span>
         <div class ="centre_text">   
             <h3> Who we are? </h3>
-            <p style="margin-top: 2em;"> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
+            <p style="margin: 2em;"> We are a group of individuals who have lived in Japan for a long time. Having explored the country and learned so much abou the local culture- we decided it was time to help other people share the same experiences we did. </p>
         </div>
         `;
     document.body.appendChild(popupNode);    
@@ -24,10 +22,9 @@ function popup_why(){
     popupNode.innerHTML = `
         <span class="popup--button" onclick="this.parentNode.remove();">&times; </span>
         <div class ="centre_text">   
-            <h3> Who we are? </h3>
-            <p style="margin-top: 2em;"> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
+            <h3> Why choose us? </h3>
+            <p style="margn: 2em;" > TOur company values itself on customer experince and tailoring any itinerary to our customers needs. If you want your own personal itinerary then using Tabibito is the way to go! </p>
+           
         </div>
         `;
     document.body.appendChild(popupNode);    
@@ -39,10 +36,8 @@ function popup_comp(){
     popupNode.innerHTML = `
         <span class="popup--button" onclick="this.parentNode.remove();">&times; </span>
         <div class ="centre_text">   
-            <h3> Who we are? </h3>
-            <p style="margin-top: 2em;"> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
+            <h3> Company goals </h3>
+            <p style="margin: 2em;"> The aim of our comapny is to thrive and prosper whilst allowing people to have the most enjoyable experiences they possible can. </p>
         </div>
         `;
     document.body.appendChild(popupNode);    
@@ -54,10 +49,9 @@ function popup_japan(){
     popupNode.innerHTML = `
         <span class="popup--button" onclick="this.parentNode.remove();">&times; </span>
         <div class ="centre_text">   
-            <h3> Who are we? </h3>
-            <p style="margin-top: 2em;"> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
-            <p> The aime of our comapny is to thrive and prosper just like the companies before us have done. </p>
+            <h3> Why you should choose Japan? </h3>
+            <p style="margin: 2em;"> Whether you're dying to explore Japanese history and culture at the variety of UNESCO World Heritage Sites in the country, indulge in diverse Japanese cuisine, or experience a ride on the lighting-fast Shinkansen trains, a trip to Japanese promises adventure around every corner. </p>
+
         </div>
         `;
     document.body.appendChild(popupNode);    

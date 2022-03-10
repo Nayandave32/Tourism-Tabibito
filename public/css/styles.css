@@ -450,8 +450,8 @@ margin-top: 40vh;
     color: rgb(255, 255, 255);
     margin-top: -45em;
     margin-left: 23em;
-    width: 800px;
-    height: 700px;
+    width: 60vw;
+    height: 60vh;
     opacity: 90%;
     border-radius: 2em;
     position: relative;
@@ -528,7 +528,7 @@ margin-top: 40vh;
  }
 
 .top {
-    padding-top: 125px;
+    padding-top: 100px;
 }
 
 .tourData {
