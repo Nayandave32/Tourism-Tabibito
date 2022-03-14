@@ -97,7 +97,7 @@ app.listen(port, () => console.log("listening to port 5000"))
   app.get('/logout.ejs', function(req, res){
     
     req.session.destroy(() => {
-      res.redirect("login");
+      res.redirect("login.ejs");
      });
     });
 
