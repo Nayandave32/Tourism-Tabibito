@@ -253,7 +253,7 @@ body{
     margin-bottom: 3em;
     margin-top: 2em;
     text-align: center;
-    justify-content: initial;
+    justify-content: center;
     display: flex;
     align-content: revert;
     margin-left: 6em;

@@ -150,7 +150,16 @@ function popup_tourism(){
         </div>
         `;
     document.body.appendChild(popupNode);    
-}
 
+let form = document.getElementById("login_form");
+form.addEventListener('submit', function(event){
 
+  console.log("here");
+  let username = document.getElementById("username")
+  let password = document.getElementById("password")
+  let password_confirm = document.getElementById("password_confirm")
 
+  if(username.includes("!", "@") == false){
+    alert("username needs to include a special symbol")
+  }
+})

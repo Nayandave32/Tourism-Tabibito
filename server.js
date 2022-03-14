@@ -76,10 +76,17 @@ app.listen(port, () => console.log("listening to port 5000"))
   app.post('/reg', function(req, res) {
     let username = req.body.username;
     let password = req.body.password;
+    let password_confirm = req.body.password_confirm;
     let email = "nothing@gmail.com"
     if (!username || !password){
       res.send("eror registering");
     }
+    if (password !== password_confirm){
+      res.send("passwords do not match")
+    }
+
+   
+
 
     connection.query("INSERT INTO accounts (username, password, email) VALUES (?,?,?)", [username, password, email], function(error){
       if(error) {
@@ -204,42 +211,18 @@ app.listen(port, () => console.log("listening to port 5000"))
           break;
       }
 
-      case "14-21":
-        if ( tourData.budget == "£1000~" && tourData.size == "1-6") {
-          console.log("temp9");
-          break;
+      case "":
+        if(tourData.budget == "undefined" || tourData.size== "undefined"){
+          res.send("You did not input any fields")
         }
-        else if (tourData.budget == "£1500+" && tourData.size == "1-6") {
-          console.log("temp10");
-          break;
-        }
-        else if (tourData.budget == "£1000~" && tourData.size == "6-12") {
-          console.log("temp11")
-          break;
-        }
-        
-        else {
-            console.log("temp12");
-            break;
-        }
+
      
   
   }
 
   });
 
-    /*let tourData =  {
-     name : req.body.name ,
-     surname : req.body.surname ,
-     email : req.body.email ,
-     medical : req.body.medical ,
-     budget : req.body.budget ,
-     duration : req.body.duration ,
-     size : req.body.size  
-    
-    res.render("menu", {tourData: tourData}); 
-  }*/
-   
+
   });
 
   app.get('/FAQ.ejs', function(req, res) {

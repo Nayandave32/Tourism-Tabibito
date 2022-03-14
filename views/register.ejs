@@ -14,8 +14,8 @@
     <div class = "register_button">
         <h1 style="margin-top: 0;"><a href="login.ejs"> Log in</a></h1>
     </div>
-    <div class="login_form">
-        <h1 >Register</h1>
+    <div class="login_form" id ="login_form">
+        <h1 >Register </h1>
         <form class="form_two" action="/reg" method="post">
             <label for="username">
                 <!-- font awesome icon -->
@@ -26,7 +26,7 @@
                 <i class="fas fa-lock"></i>
             </label>
             <input type="password" name="password" placeholder="Password" id="password" required>
-            <input class="password" type="password" name="password_conffirm" placeholder="Password confirmation" id="password_confirm" required>
+            <input class="password" type="password" name="password_confirm" placeholder="Password confirmation" id="password_confirm" required>
             <input class="password" type="submit" value="Register">
         </form>
     </div>
