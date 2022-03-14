@@ -12,7 +12,12 @@ const connection = mysql.createConnection({
 	password : 'dc57e971',
 	database : 'heroku_7dcd2f72677ea10',
   //insecureAuth : true
+});  connection.connect(function(error){
+  if(!!error) console.log(error);
+   else console.log('SQL Database Connected!');
 });
+module.exports = connection;
+
 
 
 const app = express();
@@ -40,8 +45,8 @@ app.use('/request-type', (req, res, next) => {
 app.use('/public', express.static('public'));
 app.use('/public', serveIndex('public'));
   
-//const port = process.env.PORT || 5000;
-//app.listen(port, () => console.log("listening to port 5000"))
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log("listening to port 5000"))
  
   
   app.get('/home.ejs', function(req, res) {
@@ -79,9 +84,6 @@ app.use('/public', serveIndex('public'));
     if (password !== password_confirm){
       res.send("passwords do not match")
     }
-
-   
-
 
     connection.query("INSERT INTO accounts (username, password, email) VALUES (?,?,?)", [username, password, email], function(error){
       if(error) {
@@ -206,13 +208,7 @@ app.use('/public', serveIndex('public'));
           break;
       }
 
-      case "":
-        if(tourData.budget == "undefined" || tourData.size== "undefined"){
-          res.send("You did not input any fields")
-        }
-
-     
-  
+ 
   }
 
   });
