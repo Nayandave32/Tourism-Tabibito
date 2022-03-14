@@ -15,11 +15,6 @@ const connection = mysql.createConnection({
 });
 
 
-
-
-
-
-
 const app = express();
 
 app.use(session({
@@ -45,9 +40,9 @@ app.use('/request-type', (req, res, next) => {
 app.use('/public', express.static('public'));
 app.use('/public', serveIndex('public'));
   
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log("listening to port 5000"))
-  //app.listen(3000, () => console.log('Example app is listening on port 3000.'));
+//const port = process.env.PORT || 5000;
+//app.listen(port, () => console.log("listening to port 5000"))
+ 
   
   app.get('/home.ejs', function(req, res) {
 
