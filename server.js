@@ -6,17 +6,17 @@ const e = require('express');
 var request = require("request");
 const session = require('express-session');
 const mysql = require('mysql');
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
 	host     : 'eu-cdbr-west-02.cleardb.net',
 	user     : 'bdb9c4d458a540',
 	password : 'dc57e971',
 	database : 'heroku_7dcd2f72677ea10',
   //insecureAuth : true
-});  connection.connect(function(error){
-  if(!!error) console.log(error);
-   else console.log('SQL Database Connected!');
-});
-module.exports = connection;
+});  //connection.connect(function(error){
+  //if(!!error) console.log(error);
+  // else console.log('SQL Database Connected!');
+//});
+//module.exports = connection;
 
 
 
