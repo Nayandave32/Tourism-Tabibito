@@ -1,4 +1,9 @@
-
+a {
+    color: #000000;
+}
+a:hover {
+    color: #fffdfd;
+}
 #accordion {
     width: 46vw;
     height: 0;
@@ -486,6 +491,18 @@ margin-top: 40vh;
     height: 120em;
     opacity: 95%;
 }
+
+.register_button {
+    background-color: #ffc3c3;
+    height: fit-content;
+    
+    
+    display: grid;
+    
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 2vh;;
+    }
 
 .row {
     margin: 0;

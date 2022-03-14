@@ -49,7 +49,7 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("listening to port 5000"))
   //app.listen(3000, () => console.log('Example app is listening on port 3000.'));
   
-  app.get('/', function(req, res) {
+  app.get('/home.ejs', function(req, res) {
 
     //res.sendFile(path.join(__dirname, '/views/index.html'));
     	// If the user is loggedin
@@ -57,12 +57,12 @@ app.listen(port, () => console.log("listening to port 5000"))
 		// Output username
     back= "back";
 		username = req.session.username;
-    res.render("index", {username:username, back:back});
+    res.render("home", {username:username, back:back});
 	} else {
 		// Not logged in
     back= ""
 		username ="";
-    res.render("index", {username:username, back :back});
+    res.render("home", {username:username, back :back});
 	}
 	res.end();
 });
@@ -97,7 +97,7 @@ app.listen(port, () => console.log("listening to port 5000"))
   app.get('/logout.ejs', function(req, res){
     
     req.session.destroy(() => {
-      res.redirect("/");
+      res.redirect("login");
      });
     });
 
@@ -118,7 +118,7 @@ app.listen(port, () => console.log("listening to port 5000"))
           req.session.loggedin = true;
           req.session.username = username;
          
-          res.redirect('/');
+          res.redirect('home.ejs');
         } else {
           res.send('Incorrect Username and/or Password!');
         }			
@@ -128,6 +128,11 @@ app.listen(port, () => console.log("listening to port 5000"))
       res.send('Please enter Username and Password!');
       res.end();
     }
+  });
+
+  app.get ('/', function(req, res){
+    res.render("login");
+
   });
 
 
@@ -238,14 +243,22 @@ app.listen(port, () => console.log("listening to port 5000"))
   });
 
   app.get('/FAQ.ejs', function(req, res) {
-    res.render("FAQ");
+    if (req.session.loggedin == true) {
+      res.render("FAQ");
+    } 
   });
 
   app.get('/info.ejs', function(req, res) {
-    res.render("info");
+    if (req.session.loggedin == true) {
+       res.render("info");
+    }
+   
   });
 
   app.get('/plan.ejs', function(req, res) {
-    res.render("plan");
+    if (req.session.loggedin == true) {
+      res.render("plan");
+    }
+    
   });
 
