@@ -5,6 +5,9 @@ const path = require('path');
 const e = require('express');
 var request = require("request");
 const session = require('express-session');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 const mysql = require('mysql');
 const connection = mysql.createPool({
 	host     : 'eu-cdbr-west-02.cleardb.net',
@@ -78,6 +81,8 @@ app.listen(port, () => console.log("listening to port 5000"))
     let password = req.body.password;
     let password_confirm = req.body.password_confirm;
     let email = "nothing@gmail.com"
+    const hash = bcrypt.hashSync(password, saltRounds);
+
     if (!username || !password){
       res.send("eror registering");
     }
@@ -85,9 +90,10 @@ app.listen(port, () => console.log("listening to port 5000"))
       res.send("passwords do not match")
     }
 
-    connection.query("INSERT INTO accounts (username, password, email) VALUES (?,?,?)", [username, password, email], function(error){
+
+
+    connection.query("INSERT INTO accounts (username, password, email) VALUES (?,?,?)", [username, hash, email], function(error){
       if(error) {
-        console.log(username, password);
         res.send("error")
         throw error;
       } else {
@@ -110,22 +116,27 @@ app.listen(port, () => console.log("listening to port 5000"))
     
     let username = req.body.username;
     let password = req.body.password;
-   
+    
+
     if (username && password) {
      
-      connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
-       
+      connection.query('SELECT password FROM accounts WHERE username = ?', [username], function(error, results, fields) {
+        
         if (error) throw error;
         
         if (results.length > 0) {
-         
-          req.session.loggedin = true;
-          req.session.username = username;
-         
-          res.redirect('home.ejs');
-        } else {
-          res.send('Incorrect Username and/or Password!');
-        }			
+          if(!bcrypt.compare(password, results[0].password)) {
+            
+          res.send('Incorrect Username and/or Password!'); 
+          }else {
+                  req.session.loggedin = true;
+                  req.session.username = username;
+                  
+                  res.redirect('home.ejs');
+          };
+
+       
+        } 		
         res.end();
       });
     } else {
