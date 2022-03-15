@@ -1,7 +1,7 @@
 Tabibito
 
 The website is hosted with Heroku and can be visited at: https://tabibito.herokuapp.com/
-Video showing and explaining the project can be seen at: 
+Video showing and explaining the project can be seen at: https://youtu.be/IMn5XYj3D7E
 
 
 As someone who lived in Japan for almost 3 years, I decided to create a website that will generate an itinerary for people who are intersted in visiting Japan. This itinerary will change depending on the data presented in a form. The main types of data that effect the itinerary are budget, group size and duration.

@@ -23,7 +23,7 @@ function popup_why(){
         <span class="popup--button" onclick="this.parentNode.remove();">&times; </span>
         <div class ="centre_text">   
             <h3> Why choose us? </h3>
-            <p style="margn: 2em;" > TOur company values itself on customer experince and tailoring any itinerary to our customers needs. If you want your own personal itinerary then using Tabibito is the way to go! </p>
+            <p style="margn: 2em;" > Tour company values itself on customer experince and tailoring any itinerary to our customers needs. If you want your own personal itinerary then using Tabibito is the way to go! </p>
            
         </div>
         `;
